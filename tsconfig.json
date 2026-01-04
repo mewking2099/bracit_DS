@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "paths": {
+      "*": ["./*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": false,
+    "strictInputAccessModifiers": false,
+    "strictAttributeTypes": false
+  },
+  "include": [
+    "**/*.ts",
+    ".storybook/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".storybook-static"
+  ]
+}
+

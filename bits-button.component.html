@@ -1,0 +1,28 @@
+<button
+  [type]="type"
+  [disabled]="disabled || loading"
+  [class]="buttonClasses"
+  [ngStyle]="buttonStyles"
+  (click)="onClick($event)"
+  [attr.aria-disabled]="disabled || loading">
+  
+  <!-- Loading spinner -->
+  <span *ngIf="loading" class="bits-button__spinner" aria-hidden="true">
+    <svg class="bits-button__spinner-icon" viewBox="0 0 24 24" fill="none">
+      <circle class="bits-button__spinner-circle" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.25"/>
+      <path class="bits-button__spinner-path" d="M12 2A10 10 0 0 1 22 12" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </svg>
+  </span>
+
+  <!-- Icon slot (left) -->
+  <ng-content select="[slot=icon-left]"></ng-content>
+
+  <!-- Button content -->
+  <span class="bits-button__content">
+    <ng-content></ng-content>
+  </span>
+
+  <!-- Icon slot (right) -->
+  <ng-content select="[slot=icon-right]"></ng-content>
+</button>
+
